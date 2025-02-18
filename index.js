@@ -106,6 +106,6 @@ appAgenda.post("/api/persons", (request, response) => {
 });
 
 appAgenda.use(unknownEndpoint);
-const port = 3002;
+const port = process.env.PORT || 3002;
 appAgenda.listen(port);
 console.log("Servidor ejcutandose en el puerto " + port);
